@@ -1,0 +1,15 @@
+spring:
+  main:
+    web-application-type: none
+
+tacocloud:
+  api:
+    url: http://localhost:8080/orders/fromEmail
+
+  email:
+    host: localhost:143
+    mailbox: INBOX
+    username: postmaster
+    password: 1L0v3T4c0s
+    poll-rate: 10000
+

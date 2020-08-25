@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Taco Cloud</title>
+        <link rel="stylesheet" th:href="@{/styles.css}">
+    </head>
+    <body>
+        <h1>Discount code: </h1>
+        
+        <ul>
+            <li th:each="code : ${codes}">
+                Use code <b>"<span th:text="${code.key}"></span>"</b> for
+                <span th:text="${code.value}"></span>% off your order
+            </li>
+        </ul>
+        
+    </body>
+</html>

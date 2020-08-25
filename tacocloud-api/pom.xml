@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>sia</groupId>
+		<artifactId>taco-cloud-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>tacocloud-api</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>tacocloud-api</name>
+	<description>Taco Cloud API</description>
+
+	<properties>
+		<java.version>14</java.version>
+	</properties>
+
+	<dependencies>
+		<!-- TacoCloud dependencies -->
+		<dependency>
+			<groupId>sia</groupId>
+			<artifactId>tacocloud-data</artifactId>
+			<version>${tacocloud.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>sia</groupId>
+			<artifactId>tacocloud-domain</artifactId>
+			<version>${tacocloud.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>sia</groupId>
+			<artifactId>tacocloud-security</artifactId>
+			<version>${tacocloud.version}</version>
+		</dependency>
+
+		<!--&lt;!&ndash;JMS&ndash;&gt;
+		<dependency>
+			<groupId>sia</groupId>
+			<artifactId>tacocloud-messaging-jms</artifactId>
+			<version>${tacocloud.version}</version>
+		</dependency>-->
+
+		<!--&lt;!&ndash;RabbitMQ&ndash;&gt;
+		<dependency>
+			<groupId>sia</groupId>
+			<artifactId>tacocloud-messaging-rabbitmq</artifactId>
+			<version>${tacocloud.version}</version>
+		</dependency>-->
+
+		<!--Kafka-->
+		<dependency>
+			<groupId>sia</groupId>
+			<artifactId>tacocloud-messaging-kafka</artifactId>
+			<version>${tacocloud.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-rest</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-hateoas -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-hateoas</artifactId>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.junit.vintage</groupId>
+					<artifactId>junit-vintage-engine</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+	</dependencies>
+
+</project>
